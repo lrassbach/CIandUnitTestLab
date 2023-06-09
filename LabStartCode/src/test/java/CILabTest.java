@@ -20,12 +20,17 @@ public class CILabTest {
 
     @Test
     public void detectCapitalUseTest1() {
-       fail("Not yet implemented");
-
+        // evaluate a false - no capital letters
+        CILab ciLab = new CILab();
+        ciLab.setString("no capital letters here.");
+        assertFalse(ciLab.detectCapitalUse());
     }
     @Test
     public void detectCapitalUseTest2() {
-        fail("Not yet implemented");
+        // evaluate a true - capital letters present
+        CILab ciLab = new CILab();
+        ciLab.setString("there are some CAPITAL letters.");
+        assertTrue(ciLab.detectCapitalUse());
     }
 
 
