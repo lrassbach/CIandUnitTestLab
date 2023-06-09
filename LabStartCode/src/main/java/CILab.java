@@ -13,6 +13,14 @@ public class CILab implements CILabInterface {
 
     @Override
     public boolean detectCapitalUse() {
+        if (myString != null){
+            for(int i = 0; i < myString.length(); i++){
+                char current = myString.charAt(i);
+                if (current > 64 && current < 91){
+                    return true;
+                }
+            }
+        }
         return false;
     }
 
